@@ -1,0 +1,56 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(-90deg, lightblue 50%, white);
+  margin: 0 2rem;
+  font-family: 'Satisfy', cursive;
+}
+
+.title {
+  font-size: 5rem;
+  text-align: center;
+  margin: 2rem;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 2px;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+}
+
+.quotes {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  max-width: 1000px;
+  gap: 2rem;
+
+  
+}
+
+.quote{
+  padding: 1rem;
+  border: 2px solid lightblue;
+  box-shadow: 0 10px 18px black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: aliceblue;
+}
+
+.author {
+  font-size: 2rem;
+  color: blue;
+  padding: 2rem;
+}
+
+.text-quote{
+  font-size: 1.3rem;
+  color: black;
+  margin-top: 5px;
+}
