@@ -12,9 +12,44 @@ fetch(URL)
       quotes.insertAdjacentHTML('beforeend', 
       `
         <div class='quote'>
-          <h2 class='author'>${author}</p>
+          <h2 class='author'>
+            ${authorIcon(author)}
+          </p>
           <p class='text-quote'>${text}</p>
         </div>
       `);
     }))
     .catch(error => console.log(error));
+
+
+function authorIcon(author) {
+  switch (author) {
+    case "Albert Einstein": {
+      return "Albert Einstein 👨‍🦳";
+    }
+    case "J.K. Rowling": {
+      return "J.K. Rowling 👩";
+    }
+    case "Jane Austen": {
+      return "Jane Austen 👩‍🦱";
+    }
+    case "Marilyn Monroe": {
+      return "Marilyn Monroe 👱‍♀️";
+    }
+    case "André Gide": {
+      return "André Gide 👨‍🦲";
+    }
+    case "Thomas A. Edison": {
+      return "Thomas A. Edison 💡";
+    }
+    case "Eleanor Roosevelt": {
+      return "Eleanor Roosevelt 👩";
+    }
+    case "Steve Martin": {
+      return "Steve Martin 🧓";
+    }
+    default: {
+      return author;
+    }
+  }
+}
