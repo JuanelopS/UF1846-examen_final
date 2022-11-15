@@ -27,7 +27,8 @@ app.get('/scraper', (req, res) => {
             $(".quote", html).each(function () {
               const author = $(this).find("small.author").text();
               const text = $(this).find("span.text").text();
-              quotes = [...quotes, { author, text }]; 
+              const tags = $(this).find("div.tags").text().split('\n').map(string => string.trim()).filter(tag => tag != "").splice(1);
+              quotes = [...quotes, { author, text, tags }]; 
             });
             res.json(quotes);
         })

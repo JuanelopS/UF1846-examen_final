@@ -64,6 +64,12 @@ body{
   margin-top: 5px;
 }
 
+.tags{
+  font-size: 1.1rem;
+  padding-top: 1.5rem;
+  text-align: right;
+}
+
 
 @keyframes shake {
 

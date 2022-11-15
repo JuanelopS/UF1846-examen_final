@@ -8,7 +8,7 @@ const URL = 'http://localhost:4000/scraper';
 
 fetch(URL)
     .then(response => response.json())
-    .then(data => data.map(({ author, text }) => {
+    .then(data => data.map(({ author, text,tags }) => {
       quotes.insertAdjacentHTML('beforeend', 
       `
         <div class='quote'>
@@ -16,6 +16,7 @@ fetch(URL)
             ${authorIcon(author)}
           </p>
           <p class='text-quote'>${text}</p>
+          <p class='tags'>TAGS: ${tags.join(', ')}</p>
         </div>
       `);
     }))
